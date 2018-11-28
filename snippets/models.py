@@ -12,7 +12,7 @@ STYLE_CHOICE = [('C', 'Cursive'),
 
 class Snippet(models.Model):
     created = models.DateTimeField(auto_now_add=True)
-    title = models.CharField(max_length=50, blank=True, default='')
+    title = models.CharField(max_length=50, unique=True)
     code = models.TextField()
     boolean = models.BooleanField(default=False)
     language = models.CharField(choices=LANGUAGE_CHOICES, default='Node', max_length=20)
