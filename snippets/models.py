@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # Create your models here.
 
 
@@ -17,6 +16,7 @@ class Snippet(models.Model):
     boolean = models.BooleanField(default=False)
     language = models.CharField(choices=LANGUAGE_CHOICES, default='Node', max_length=20)
     style = models.CharField(choices=STYLE_CHOICE, default='STYLE', max_length=50)
+    owner = models.ForeignKey('auth.User', related_name='snippets', on_delete=models.CASCADE, default='')
 
     class Meta:
         ordering = ('created',)
