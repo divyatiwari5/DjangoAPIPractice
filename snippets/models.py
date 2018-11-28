@@ -20,3 +20,7 @@ class Snippet(models.Model):
 
     class Meta:
         ordering = ('created',)
+
+
+    def __str__(self):
+        return "{}-{}".format(self.title, self.code, self.boolean, self.language, self.style)
