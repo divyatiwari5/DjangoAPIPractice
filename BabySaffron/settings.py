@@ -61,9 +61,14 @@ REST_FRAMEWORK = {
 
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
-    )
+    ),
 }
 
+AUTHENTICATION_BACKENDS = [
+       #Django Admin Panel
+    'django.contrib.auth.backends.ModelBackend',
+
+]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

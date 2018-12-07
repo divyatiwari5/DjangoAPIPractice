@@ -20,10 +20,11 @@ admin.site.site_header = "Baby Saffron Administrator | By CMT"
 admin.site.site_title = "Baby Saffron Administrator | By CMT"
 
 urlpatterns = [
+    path('fb/', include('drf_fb.urls')),
     path('', include('snippets.url')),
     path('pagetags/', include('pagetags.urls')),
     path('jet/', include('jet.urls', 'jet')),
     path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     path('api/', include('rest_framework.urls')),
 ]
