@@ -9,7 +9,7 @@ django-jet==1.0.8
 django-oauth-toolkit==1.2.0
 django-rest-framework-social-oauth2==1.1.0
 django-sendsms==0.3.1
-djangorestframework==3.9.0
+djangorestframework==3.9.1
 djangorestframework-jwt==1.11.0
 hspsms==0.0.2
 idna==2.7
